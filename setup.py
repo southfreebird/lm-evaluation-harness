@@ -31,7 +31,7 @@ setuptools.setup(
         "numexpr",
         "openai>=0.6.4",
         "omegaconf>=2.2",
-        "peft>=0.2.0",
+        # "peft>=0.2.0",  # Remove GPU dependencies
         "pybind11>=2.6.2",
         "pycountry",
         "pytablewriter",
@@ -39,11 +39,11 @@ setuptools.setup(
         "sacrebleu==1.5.0",
         "scikit-learn>=0.24.1",
         "sqlitedict",
-        "torch>=1.7",
+        # "torch>=1.7",  # Remove GPU dependencies
         "tqdm-multiprocess",
         "transformers>=4.1",
         "zstandard",
-        "accelerate>=0.17.1",
+        # "accelerate>=0.17.1",  # Remove GPU dependencies
     ],
     extras_require={
         "dev": ["black", "flake8", "pre-commit", "pytest", "pytest-cov"],

@@ -11,7 +11,9 @@ from sqlitedict import SqliteDict
 from tqdm import tqdm
 import torch
 import torch.nn.functional as F
-from accelerate import find_executable_batch_size
+# Copied this function from source and put it in accelerate.py file
+# We need it to remove dependency from accelerate -> torch
+from lm_eval.accelerate import find_executable_batch_size
 
 from lm_eval.metrics import mean, weighted_perplexity, weighted_mean, bits_per_byte
 from lm_eval import utils
